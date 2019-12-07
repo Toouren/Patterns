@@ -6,9 +6,6 @@ public class MailMessage {
 
     public MailMessage(String messageRecipient, String messageBody,
                        String[] messageCopyRecipients, String messageTheme) {
-        if (messageBody == null || messageRecipient == null) {
-            throw new Error("Нельзя создать письмо без тела и получателя");
-        }
         this.messageRecipient = messageRecipient;
         this.messageBody = messageBody;
         this.messageCopyRecipients = messageCopyRecipients;

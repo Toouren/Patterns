@@ -3,17 +3,17 @@ public class main {
         MailMessageBuilder mailMessageBuilder = new MailMessageBuilder();
 
         MailMessage mailWithBodyAndRecipientMessage = mailMessageBuilder
-                .addMessageBody("Привет всем!")
-                .addMessageRecipient("nvk.vasiliy@gmail.com")
-                .getResult();
+                .addBody("Привет всем!")
+                .addRecipient("nvk.vasiliy@gmail.com")
+                .getMessage();
 
         System.out.println(String.format("Письмо только с получателем и телом %n%n%s", mailWithBodyAndRecipientMessage));
 
         MailMessage mailWithCopyRecipients = mailMessageBuilder
-                .addMessageBody("Привет всем")
-                .addMessageRecipient("nvk.vasiliy@gmail.com")
-                .addMessageCopyRecipients(new String[]{"ivanov@gmail.com", "petrov@gmail.com"})
-                .getResult();
+                .addBody("Привет всем")
+                .addRecipient("nvk.vasiliy@gmail.com")
+                .addCopyRecipients(new String[]{"ivanov@gmail.com", "petrov@gmail.com"})
+                .getMessage();
 
         System.out.println(String.format("Письмо с получателем, телом и получателями копии %n%n%s", mailWithCopyRecipients));
     }
