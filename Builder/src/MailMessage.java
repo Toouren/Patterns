@@ -6,26 +6,13 @@ public class MailMessage {
 
     public MailMessage(String messageRecipient, String messageBody,
                        String[] messageCopyRecipients, String messageTheme) {
+        if (messageBody == null || messageRecipient == null) {
+            throw new Error("Нельзя создать письмо без тела и получателя");
+        }
         this.messageRecipient = messageRecipient;
         this.messageBody = messageBody;
         this.messageCopyRecipients = messageCopyRecipients;
         this.messageTheme = messageTheme;
-    }
-
-    public String getMessageBody() {
-        return messageBody;
-    }
-
-    public String getMessageRecipient() {
-        return messageRecipient;
-    }
-
-    public String getMessageTheme() {
-        return messageTheme;
-    }
-
-    public String[] getMessageCopyRecipients() {
-        return messageCopyRecipients;
     }
 
     public String toString() {

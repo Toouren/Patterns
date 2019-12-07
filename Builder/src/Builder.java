@@ -1,6 +1,6 @@
 public interface Builder {
-    void setMessageRecipient(String recipient);
-    void setMessageBody(String body);
-    void setMessageCopyRecipients(String[] recipients);
-    void setMessageTheme(String theme);
+    Builder addMessageRecipient(String recipient);
+    Builder addMessageBody(String body);
+    Builder addMessageCopyRecipients(String[] recipients);
+    Builder addMessageTheme(String theme);
 }

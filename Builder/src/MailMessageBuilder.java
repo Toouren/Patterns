@@ -5,23 +5,27 @@ public class MailMessageBuilder implements Builder {
     private String messageTheme;
 
     @Override
-    public void setMessageRecipient(String recipient) {
+    public MailMessageBuilder addMessageRecipient(String recipient) {
         this.messageRecipient = recipient;
+        return this;
     }
 
     @Override
-    public void setMessageBody(String body) {
+    public MailMessageBuilder addMessageBody(String body) {
         this.messageBody = body;
+        return this;
     }
 
     @Override
-    public void setMessageCopyRecipients(String[] recipients) {
+    public MailMessageBuilder addMessageCopyRecipients(String[] recipients) {
         this.messageCopyRecipients = recipients;
+        return this;
     }
 
     @Override
-    public void setMessageTheme(String theme) {
+    public MailMessageBuilder addMessageTheme(String theme) {
         this.messageTheme = theme;
+        return this;
     }
 
     public MailMessage getResult() {
